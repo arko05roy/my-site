@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono, Inter, VT323, Doto } from "next/font/google";
+import { Geist, Geist_Mono, Inter, VT323, Doto, JetBrains_Mono, Silkscreen } from "next/font/google";
 import "./globals.css";
 import { portfolioConfig } from "@/config/portfolio";
 import { Navbar1 } from "@/components/ui/navbar-1";
+import SmoothScrolling from "@/components/smooth-scrolling";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,17 @@ const vt323 = VT323({
   weight: "400",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+
+const silkscreen = Silkscreen({
+  variable: "--font-silkscreen",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 const doto = Doto({
   variable: "--font-doto",
   subsets: ["latin"],
@@ -44,9 +56,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${vt323.variable} ${jetbrainsMono.variable} ${silkscreen.variable} ${doto.variable}`}>
       <body>
-        <Navbar1 />
-        {children}
-        <Script src="/oneko.js" strategy="lazyOnload" />
+        <SmoothScrolling>
+          <Navbar1 />
+          {children}
+          <Script src="/oneko.js" strategy="lazyOnload" />
+        </SmoothScrolling>
       </body>
     </html>
   );

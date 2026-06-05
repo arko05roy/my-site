@@ -1,4 +1,5 @@
-import { Home, Folder, Star, Briefcase } from "lucide-react";
+import { Home, Folder, Star, Briefcase, Database, Brain, LineChart, Target, Zap } from "lucide-react";
+import { SiNextdotjs, SiTypescript, SiReact, SiTailwindcss, SiFramer, SiVuedotjs, SiSvelte, SiVercel, SiRedis, SiFirebase, SiGooglecloud, SiDocker, SiMistralai, SiPython, SiLangchain, SiSupabase, SiDrizzle, SiNodedotjs, SiMongodb, SiGooglemaps, SiGooglegemini, SiVite } from 'react-icons/si';
 
 export const portfolioConfig = {
   metadata: {
@@ -59,7 +60,12 @@ export const portfolioConfig = {
         imagePlaceholder: "[ Tokokino Screenshot ]",
         imageUrl: "",
         description: "A client-heavy screenshot mockup generator for creating polished product visuals with browser and device frames, backgrounds, overlays, annotations, and fast export/share flows.",
-        tech: ["N Next.js", "</> TypeScript", "⚛ React", "🌊 Tailwind CSS"],
+        tech: [
+          { name: "Next.js", icon: SiNextdotjs },
+          { name: "TypeScript", icon: SiTypescript },
+          { name: "React", icon: SiReact },
+          { name: "Tailwind CSS", icon: SiTailwindcss },
+        ],
       },
       {
         title: "KeyZen",
@@ -68,7 +74,12 @@ export const portfolioConfig = {
         imagePlaceholder: "[ KeyZen Screenshot ]",
         imageUrl: "",
         description: "A typing speed test built around the Keychron keyboard aesthetic with audio feedback on every keystroke. Tracks WPM, accuracy, and stats with a clean, minimal UI.",
-        tech: ["N Next.js", "</> TypeScript", "✨ Motion", "</> Recharts"],
+        tech: [
+          { name: "Next.js", icon: SiNextdotjs },
+          { name: "TypeScript", icon: SiTypescript },
+          { name: "Motion", icon: SiFramer },
+          { name: "Recharts", icon: LineChart },
+        ],
       },
       {
         title: "taptickit",
@@ -77,7 +88,12 @@ export const portfolioConfig = {
         imagePlaceholder: "[ taptickit Screenshot ]",
         imageUrl: "",
         description: "Haptic feedback for the mobile web with zero dependencies. React, Vue, Svelte, and vanilla APIs with presets like success, warning, selection, and impact-style taps via the Vibration API.",
-        tech: ["</> TypeScript", "⚛ React", "</> Vue", "</> Svelte"],
+        tech: [
+          { name: "TypeScript", icon: SiTypescript },
+          { name: "React", icon: SiReact },
+          { name: "Vue", icon: SiVuedotjs },
+          { name: "Svelte", icon: SiSvelte },
+        ],
       },
     ],
   },
@@ -102,7 +118,17 @@ export const portfolioConfig = {
           "Improved reliability and performance across microservices deployed with **Docker, Firebase**, and **GCP**.",
           "Deployed multiple services on **Cloud Run** with end-to-end **CI/CD** pipelines managed via **Coolify**.",
         ],
-        tech: ["▲ Vercel AI SDK", "⚛ React", "⎔ XYFlow", "🔴 Redis", "🔥 Firebase", "☁ GCP", "🐳 Docker", "⚡ Langfuse", "N Next.js"],
+        tech: [
+          { name: "Vercel AI SDK", icon: SiVercel },
+          { name: "React", icon: SiReact },
+          { name: "XYFlow", icon: Target },
+          { name: "Redis", icon: SiRedis },
+          { name: "Firebase", icon: SiFirebase },
+          { name: "GCP", icon: SiGooglecloud },
+          { name: "Docker", icon: SiDocker },
+          { name: "Langfuse", icon: Zap },
+          { name: "Next.js", icon: SiNextdotjs },
+        ],
       },
       {
         company: "Navdyut AI",
@@ -118,7 +144,18 @@ export const portfolioConfig = {
           "Scaled the system to **500+ users** and contributed to deployments for **public sector** use.",
           "Project work was featured in **regional newspapers**.",
         ],
-        tech: ["🌪 Mistral", "🦥 Unsloth", "🐳 Docker", "🦜 Langchain", "🦙 LlamaIndex", "🌲 Pinecone", "N Next.js", "🌊 TailwindCSS", "⚡ Supabase", "🌧 Drizzle"],
+        tech: [
+          { name: "Mistral", icon: SiMistralai },
+          { name: "Unsloth", icon: SiPython },
+          { name: "Docker", icon: SiDocker },
+          { name: "Langchain", icon: SiLangchain },
+          { name: "LlamaIndex", icon: Brain },
+          { name: "Pinecone", icon: Database },
+          { name: "Next.js", icon: SiNextdotjs },
+          { name: "TailwindCSS", icon: SiTailwindcss },
+          { name: "Supabase", icon: SiSupabase },
+          { name: "Drizzle", icon: SiDrizzle },
+        ],
       },
     ],
   },
@@ -131,7 +168,16 @@ export const portfolioConfig = {
         placement: "1st Place",
         event: "Envision Hackathon • 2023 • Assam Down Town University",
         description: "Built WasteEasy, a **waste-management platform** focused on correct segregation and easier disposal. Added **AI-powered waste classification**, **location-aware discovery** of nearby disposal points via maps, and a **coupon-based incentive loop** to reward responsible dumping behavior. The project won **1st place at Envision Hackathon** and was later recognised as a unique tech startup at an **IIM Shillong** entrepreneurship event.",
-        tech: ["⚛ React JS", "⬢ Node.js", "🍃 MongoDB", "📍 Google Maps API", "✨ Gemini 1.5 Pro", "🐍 Python", "👁️ YOLO", "⚡ Vite"],
+        tech: [
+          { name: "React JS", icon: SiReact },
+          { name: "Node.js", icon: SiNodedotjs },
+          { name: "MongoDB", icon: SiMongodb },
+          { name: "Google Maps API", icon: SiGooglemaps },
+          { name: "Gemini 1.5 Pro", icon: SiGooglegemini },
+          { name: "Python", icon: SiPython },
+          { name: "YOLO", icon: Target },
+          { name: "Vite", icon: SiVite },
+        ],
         linkText: "GitHub",
         linkUrl: "#",
       },

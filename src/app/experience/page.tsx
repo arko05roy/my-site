@@ -45,9 +45,15 @@ export default function ExperiencePage() {
 
               <h4 className={styles.techTitle}>TECHNOLOGY USED</h4>
               <div className={styles.techPills}>
-                {exp.tech.map((techItem, j) => (
-                  <span key={j} className={styles.techPill}>{techItem}</span>
-                ))}
+                {exp.tech.map((techItem, j) => {
+                  const Icon = techItem.icon;
+                  return (
+                    <span key={j} className={styles.techPill}>
+                      {Icon && <Icon className="inline-block mr-1.5 w-3.5 h-3.5" />}
+                      {techItem.name}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           ))}
