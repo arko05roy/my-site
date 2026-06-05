@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, VT323, JetBrains_Mono, Silkscreen, Doto } from "next/font/google";
+import { Geist, Geist_Mono, Inter, VT323, Doto } from "next/font/google";
 import "./globals.css";
+import { portfolioConfig } from "@/config/portfolio";
+import { Navbar1 } from "@/components/ui/navbar-1";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,29 +26,15 @@ const vt323 = VT323({
   weight: "400",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
-
-const silkscreen = Silkscreen({
-  variable: "--font-silkscreen",
-  subsets: ["latin"],
-  weight: "400",
-});
-
 const doto = Doto({
   variable: "--font-doto",
   subsets: ["latin"],
-  weight: "400",
 });
 
 export const metadata: Metadata = {
-  title: "Shiva Bhattacharjee - Portfolio",
-  description: "Portfolio of Shiva Bhattacharjee, Applied AI Engineer",
+  title: portfolioConfig.metadata.title,
+  description: portfolioConfig.metadata.description,
 };
-
-import { Navbar1 } from "@/components/ui/navbar-1";
 
 export default function RootLayout({
   children,

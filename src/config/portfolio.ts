@@ -1,0 +1,161 @@
+import { Home, Folder, Star, Briefcase } from "lucide-react";
+
+export const portfolioConfig = {
+  metadata: {
+    title: "Shiva Bhattacharjee - Portfolio",
+    description: "Portfolio of Shiva Bhattacharjee, Applied AI Engineer",
+  },
+  personal: {
+    name: "SHIVA BHATTACHARJEE",
+    greeting: "Hola I'm",
+    greetingEmoji: "👋",
+    subtitle: "I WORK ON AI, LLMS, AND BUILDING DEVELOPER TOOLS ON TOP OF THEM",
+    aboutTitle: "About Me",
+    aboutParagraphs: [
+      "I'm Shiva, an **Applied AI Engineer** who learned by building things in public, breaking them under real users, and then fixing the parts that failed. I started with freelance PHP/jQuery work, moved into React and full-stack systems, and eventually found my lane around applied AI, infra, and product engineering.",
+      "The work that taught me the most came from building **web streaming projects** — wiring up **HLS / m3u8 pipelines**, scrapers, caching layers, and servers that had to hold up under **15k users**. It was chaotic and forced me to learn scaling, infra, and the painful side of shipping fast — still one of my best technical lessons.",
+      "Since then I've won **5 hackathons**, qualified for **Smart India Hackathon 2023**, and shipped production AI systems at early-stage startups. Right now I'm at **Bez**, working on AI agent workflows, vector search, RAG memory, and multimodal image pipelines.",
+    ],
+    notableAchievementsTitle: "Notable achievements",
+    notableAchievements: [
+      {
+        title: "Rise In bounty",
+        description: "Got a bounty from **Rise In** for a project that lets people lend money on **Ethereum** and build an actual **credit score on-chain**. Built flows for issuing loans, tracking active borrows, repayments, and defaulter marking with **transparent contract-backed state**. No banks, just smart contracts.",
+        linkText: "GitHub ↗",
+        linkUrl: "#",
+      },
+      {
+        title: "In the news",
+        description: "Got featured in a **national newspaper** for building a **fine-tuned LLM on the Assamese language**, one of the first of its kind for a low-resource Indian language.",
+        linkText: "Twitter ↗",
+        linkUrl: "#",
+      },
+      {
+        title: "Side project at scale",
+        description: "Built **AnimeTrix**, an anime streaming site, hit around **15,000 users** and was handling **100 concurrent viewers** at peak using web scraping and some creative infra decisions. Had to take it down after a DMCA. The repo still has **~190 stars**.",
+        linkText: "GitHub ↗",
+        linkUrl: "#",
+      },
+    ],
+  },
+  socials: {
+    githubUsername: "arko05roy",
+    links: [
+      { name: "Twitter", url: "#", icon: "twitter" },
+      { name: "Github", url: "#", icon: "github" },
+      { name: "LinkedIn", url: "#", icon: "linkedin" },
+      { name: "Discord", url: "#", icon: "discord" },
+      { name: "Email", url: "#", icon: "email" },
+    ],
+  },
+  projects: {
+    title: "PROJECTS",
+    subtitle: "A collection of things I've built.",
+    items: [
+      {
+        title: "Tokokino",
+        meta: "Side Project • Web App",
+        stars: 21,
+        imagePlaceholder: "[ Tokokino Screenshot ]",
+        imageUrl: "",
+        description: "A client-heavy screenshot mockup generator for creating polished product visuals with browser and device frames, backgrounds, overlays, annotations, and fast export/share flows.",
+        tech: ["N Next.js", "</> TypeScript", "⚛ React", "🌊 Tailwind CSS"],
+      },
+      {
+        title: "KeyZen",
+        meta: "Side Project • Web App",
+        stars: 134,
+        imagePlaceholder: "[ KeyZen Screenshot ]",
+        imageUrl: "",
+        description: "A typing speed test built around the Keychron keyboard aesthetic with audio feedback on every keystroke. Tracks WPM, accuracy, and stats with a clean, minimal UI.",
+        tech: ["N Next.js", "</> TypeScript", "✨ Motion", "</> Recharts"],
+      },
+      {
+        title: "taptickit",
+        meta: "Open Source • npm",
+        stars: 2,
+        imagePlaceholder: "[ taptickit Screenshot ]",
+        imageUrl: "",
+        description: "Haptic feedback for the mobile web with zero dependencies. React, Vue, Svelte, and vanilla APIs with presets like success, warning, selection, and impact-style taps via the Vibration API.",
+        tech: ["</> TypeScript", "⚛ React", "</> Vue", "</> Svelte"],
+      },
+    ],
+  },
+  experience: {
+    title: "EXPERIENCES",
+    subtitle: "My journey as a software developer over 2+ years",
+    items: [
+      {
+        company: "Bez",
+        role: "Applied AI Engineer",
+        badge: "Full-Time",
+        duration: "July 2025 - Present",
+        location: "New York, Remote",
+        logoType: "icon",
+        responsibilities: [
+          "Reduced **jewelry design turnaround from days to minutes** by building AI agent workflows using **Vercel AI SDK** with observability via **Langfuse**.",
+          "Built an interactive jewelry design canvas using **React + XYFlow** enabling credit-gated editing and real-time agent-driven design iteration.",
+          "Developed a **Redis** queue pipeline generating **70+ product images** per client batch in **under 5 minutes**.",
+          "Built a **multimodal inventory search** enabling queries by image or text, both vectorized and ranked against a **Milvus** DB via **cosine similarity** with **AI image tagging** to enrich retrieval. Achieved **sub-1.5s search across 25,000+ images** using **gemini-embedding-2-preview** and a **semantic reranker**.",
+          "Built a **RAG-based persistent memory system** using **user-scoped vector embeddings** in **Milvus** to continuously learn and refine personalized jewelry design preferences across sessions. Optimized **ANN-based embedding retrieval to sub-80ms** latency.",
+          "Used **General Translation** to ship **multilingual app experiences** for **international clients**.",
+          "Improved reliability and performance across microservices deployed with **Docker, Firebase**, and **GCP**.",
+          "Deployed multiple services on **Cloud Run** with end-to-end **CI/CD** pipelines managed via **Coolify**.",
+        ],
+        tech: ["▲ Vercel AI SDK", "⚛ React", "⎔ XYFlow", "🔴 Redis", "🔥 Firebase", "☁ GCP", "🐳 Docker", "⚡ Langfuse", "N Next.js"],
+      },
+      {
+        company: "Navdyut AI",
+        role: "Founding Engineer",
+        badge: "Full-Time",
+        duration: "Jan 2025 - July 2025",
+        location: "Guwahati, On-Site",
+        logoType: "text",
+        logoText: "ন",
+        responsibilities: [
+          "Got deep into **fine-tuning LLMs on low-resource Indian languages** using **Unsloth, containerizing models with Docker**, self-hosting them on servers, and exposing them as **public APIs**.",
+          "Used the **Brave Search API** to give the bot **real-time information** from the web.",
+          "Scaled the system to **500+ users** and contributed to deployments for **public sector** use.",
+          "Project work was featured in **regional newspapers**.",
+        ],
+        tech: ["🌪 Mistral", "🦥 Unsloth", "🐳 Docker", "🦜 Langchain", "🦙 LlamaIndex", "🌲 Pinecone", "N Next.js", "🌊 TailwindCSS", "⚡ Supabase", "🌧 Drizzle"],
+      },
+    ],
+  },
+  hackathons: {
+    title: "HACKATHONS",
+    subtitle: "Competitions, bounties, and builds under pressure.",
+    items: [
+      {
+        title: "WasteEasy",
+        placement: "1st Place",
+        event: "Envision Hackathon • 2023 • Assam Down Town University",
+        description: "Built WasteEasy, a **waste-management platform** focused on correct segregation and easier disposal. Added **AI-powered waste classification**, **location-aware discovery** of nearby disposal points via maps, and a **coupon-based incentive loop** to reward responsible dumping behavior. The project won **1st place at Envision Hackathon** and was later recognised as a unique tech startup at an **IIM Shillong** entrepreneurship event.",
+        tech: ["⚛ React JS", "⬢ Node.js", "🍃 MongoDB", "📍 Google Maps API", "✨ Gemini 1.5 Pro", "🐍 Python", "👁️ YOLO", "⚡ Vite"],
+        linkText: "GitHub",
+        linkUrl: "#",
+      },
+      {
+        title: "Smart Parking for Guwahati",
+        placement: "1st Place",
+        event: "Technophilia 2023 • 2023 • Assam Royal Global University",
+        description: "Built a **Google Maps-style smart parking platform** for Guwahati where users can discover nearby parking spots, calculate the **shortest route** to available locations, and make faster parking decisions in busy areas. Added **community-driven features** like ratings, written reviews, on-ground image uploads, and complaint reporting to flag incorrect info or local issues. The **crowdsourced data model** kept listings fresh and practical, helping the project win 1st place.",
+        tech: [],
+      },
+    ],
+  },
+  navigation: [
+    { name: "About", path: "/", icon: Home },
+    { name: "Projects", path: "/projects", icon: Folder },
+    { name: "Hacks", path: "/hackathons", icon: Star },
+    { name: "Experience", path: "/experience", icon: Briefcase },
+  ],
+  footer: {
+    datetime: "Fri, Jun 5, 2026 • 06:10:28 PM",
+    location: "Kolkata, India",
+    weather: "31°C",
+    visitors: "1,354",
+    battery: "100%",
+    copyright: "© 2026 Shiva Bhattacharjee. All rights reserved.",
+  }
+};

@@ -2,21 +2,19 @@
 
 import * as React from "react"
 import { useState } from "react"
-import { motion, AnimatePresence } from "motion/react"
-import { Menu, X, Home, Folder, Star, Briefcase, Moon } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Menu, X, Moon } from "lucide-react"
 import Link from "next/link"
-
-const navItems = [
-  { name: "About", path: "/", icon: Home },
-  { name: "Projects", path: "/projects", icon: Folder },
-  { name: "Hacks", path: "/hackathons", icon: Star },
-  { name: "Experience", path: "/experience", icon: Briefcase }
-]
+import { usePathname } from "next/navigation"
+import { portfolioConfig } from "@/config/portfolio"
 
 const Navbar1 = () => {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => setIsOpen(!isOpen)
+
+  const navItems = portfolioConfig.navigation;
 
   return (
     <div className="flex justify-center w-full py-6 px-4 pointer-events-none">
@@ -25,7 +23,8 @@ const Navbar1 = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-2">
           {navItems.map((item) => {
-            const isActive = item.name === "About"; // Hardcoded for preview, ideally usePathname
+            const isActive = pathname === item.path;
+            const Icon = item.icon;
             return (
               <motion.div
                 key={item.name}
@@ -38,7 +37,7 @@ const Navbar1 = () => {
                   href={item.path} 
                   className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm transition-colors ${isActive ? 'bg-[#222222] text-white border border-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
                 >
-                  <item.icon className="w-4 h-4" />
+                  <Icon className="w-4 h-4" />
                   <span className="font-medium">{item.name}</span>
                 </Link>
               </motion.div>
@@ -78,24 +77,27 @@ const Navbar1 = () => {
               <X className="h-6 w-6 text-white" />
             </motion.button>
             <div className="flex flex-col space-y-4 mt-8">
-              {navItems.map((item, i) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 + 0.1 }}
-                  exit={{ opacity: 0, x: 20 }}
-                >
-                  <Link 
-                    href={item.path} 
-                    className="flex items-center gap-4 text-xl text-zinc-300 hover:text-white p-4 rounded-xl hover:bg-white/5" 
-                    onClick={toggleMenu}
+              {navItems.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 + 0.1 }}
+                    exit={{ opacity: 0, x: 20 }}
                   >
-                    <item.icon className="w-6 h-6" />
-                    <span className="font-medium">{item.name}</span>
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link 
+                      href={item.path} 
+                      className="flex items-center gap-4 text-xl text-zinc-300 hover:text-white p-4 rounded-xl hover:bg-white/5" 
+                      onClick={toggleMenu}
+                    >
+                      <Icon className="w-6 h-6" />
+                      <span className="font-medium">{item.name}</span>
+                    </Link>
+                  </motion.div>
+                )
+              })}
             </div>
           </motion.div>
         )}
