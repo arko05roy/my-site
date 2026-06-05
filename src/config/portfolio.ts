@@ -3,38 +3,38 @@ import { SiNextdotjs, SiTypescript, SiReact, SiTailwindcss, SiFramer, SiVuedotjs
 
 export const portfolioConfig = {
   metadata: {
-    title: "Shiva Bhattacharjee - Portfolio",
-    description: "Portfolio of Shiva Bhattacharjee, Applied AI Engineer",
+    title: "Arko Roy - Portfolio",
+    description: "Portfolio of Arko Roy, Software Developer",
   },
   personal: {
-    name: "SHIVA BHATTACHARJEE",
+    name: "Arko Roy",
     greeting: "Hola I'm",
     greetingEmoji: "👋",
-    subtitle: "I WORK ON AI, LLMS, AND BUILDING DEVELOPER TOOLS ON TOP OF THEM",
+    subtitle: "I WORK ON AI, WEB3, AND BUILDING DEVELOPER TOOLS ON TOP OF THEM",
     aboutTitle: "About Me",
     aboutParagraphs: [
-      "I'm Shiva, an **Applied AI Engineer** who learned by building things in public, breaking them under real users, and then fixing the parts that failed. I started with freelance PHP/jQuery work, moved into React and full-stack systems, and eventually found my lane around applied AI, infra, and product engineering.",
-      "The work that taught me the most came from building **web streaming projects** — wiring up **HLS / m3u8 pipelines**, scrapers, caching layers, and servers that had to hold up under **15k users**. It was chaotic and forced me to learn scaling, infra, and the painful side of shipping fast — still one of my best technical lessons.",
-      "Since then I've won **5 hackathons**, qualified for **Smart India Hackathon 2023**, and shipped production AI systems at early-stage startups. Right now I'm at **Bez**, working on AI agent workflows, vector search, RAG memory, and multimodal image pipelines.",
+      "I'm Arko, an **Software Developer** who learned by building things simple weird apps using Python during my high school. I started with freelance Rust,then moved into React and full-stack systems, and eventually found my lane around applied AI, Web3, and product engineering.",
+      "The work that taught me the most came from building **for early startups** — wiring up **HLS / m3u8 pipelines**, scrapers, caching layers, and servers that had to hold up under **15k users**. It was chaotic and forced me to learn scaling, infra, and the painful side of shipping fast — still one of my best technical lessons.",
+      "Since then I've won **13 hackathons**, won the **Solana Frontier Hackathon 2026**, and shipped production AI systems at early-stage startups. Right now I'm at **Supermission**, working on AI agent workflows, hooking up agents using ERC8004 and A2A ",
     ],
     notableAchievementsTitle: "Notable achievements",
     notableAchievements: [
       {
-        title: "Rise In bounty",
-        description: "Got a bounty from **Rise In** for a project that lets people lend money on **Ethereum** and build an actual **credit score on-chain**. Built flows for issuing loans, tracking active borrows, repayments, and defaulter marking with **transparent contract-backed state**. No banks, just smart contracts.",
+        title: "ETH Global Bounty Winner",
+        description: "Won bounty at **ETHGlobal New Delhi 2026** for building **Tzunami**, a decentralized protocol that lets users transact privately while satisfying compliance mandates, leveraging cutting-edge cryptography, deterministic identity proofs, and production-ready smart contracts.",
         linkText: "GitHub ↗",
-        linkUrl: "#",
+        linkUrl: "https://github.com/arko05roy/Tzunami-ETHGlobal",
       },
       {
-        title: "In the news",
-        description: "Got featured in a **national newspaper** for building a **fine-tuned LLM on the Assamese language**, one of the first of its kind for a low-resource Indian language.",
-        linkText: "Twitter ↗",
-        linkUrl: "#",
+        title: "Avalanche Pitch Day Goa Winner",
+        description: "Won **Avalanche Pitch Day Goa 2026** for building **Avacado** - A privacy wallet for crypto savy users who want to make private transactions while also complying with KYC/AML regulations.",
+        linkText: "Avacado ↗",
+        linkUrl: "https://avacado.app",
       },
       {
         title: "Side project at scale",
-        description: "Built **AnimeTrix**, an anime streaming site, hit around **15,000 users** and was handling **100 concurrent viewers** at peak using web scraping and some creative infra decisions. Had to take it down after a DMCA. The repo still has **~190 stars**.",
-        linkText: "GitHub ↗",
+        description: "Built **AnimeTrix**, an anime streaming site, hit around **15,000 users** and was handling **100 concurrent viewers** at peak using web scraping and some creative infra decisions. Had to take it down after a DMCA. The repo was taken down 2 months back, had **~190 stars**.",
+        linkText: "Remembering AnimeTrix",
         linkUrl: "#",
       },
     ],
@@ -42,11 +42,11 @@ export const portfolioConfig = {
   socials: {
     githubUsername: "arko05roy",
     links: [
-      { name: "Twitter", url: "#", icon: "twitter" },
-      { name: "Github", url: "#", icon: "github" },
-      { name: "LinkedIn", url: "#", icon: "linkedin" },
+      { name: "Twitter", url: "https://x.com/notarkoroy", icon: "twitter" },
+      { name: "Github", url: "https://github.com/arko05roy", icon: "github" },
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/arkoroyy/", icon: "linkedin" },
       { name: "Discord", url: "#", icon: "discord" },
-      { name: "Email", url: "#", icon: "email" },
+      { name: "Email", url: "arkoroy302@gmail.com", icon: "email" },
     ],
   },
   projects: {
